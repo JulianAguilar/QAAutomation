@@ -1,4 +1,4 @@
-package com.icaro.clase2;
+package com.icaro.clase2.Clase2;
 
 public class A2ImprimirSemana {
 
