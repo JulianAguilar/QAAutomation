@@ -28,6 +28,13 @@ public class SoldadoTest {
         Assert.assertFalse(soldado.estaMuerto());
     }
 
+    @Test
+    public  void descansarTest(){
+        Soldado soldado = new Soldado(80);
+        soldado.descansar();
+        Assert.assertEquals(soldado.getSalud(), 100 );
+    }
+
 
 
 

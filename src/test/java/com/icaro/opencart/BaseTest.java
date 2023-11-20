@@ -1,18 +1,20 @@
-package com.icaro.clase6;
+package com.icaro.opencart;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-public class PrimeraPruebaAutomationTest {
+public class BaseTest {
 
     private WebDriver driver;
 
+
     @BeforeMethod
-    public void setup(){
+    public void setup() {
         ChromeOptions options = new ChromeOptions();
 
         System.setProperty("webdriver.chrome.driver",
@@ -24,18 +26,18 @@ public class PrimeraPruebaAutomationTest {
         options.setPageLoadTimeout(Duration.ofSeconds(60));
 
         this.driver = new ChromeDriver(options);
-       // this.driver.manage().window().maximize();
     }
 
-    @Test
-    public void abrirPagina(){
-        this.driver.get("https://opencart.abstracta.us/");
-    }
-
-    @AfterMethod
-    public void tearDown(){
-        if (this.driver != null){
-            this.driver.quit();
+       public WebDriver getDriver() {
+           return this.driver;
         }
-    }
+
+
+
+        @AfterMethod
+        public void tearDown () {
+            if (this.driver != null) {
+                this.driver.quit();
+            }
+        }
 }
