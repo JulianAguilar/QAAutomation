@@ -3,6 +3,7 @@ package com.icaro.stepDefinitions;
 import com.icaro.hooks.Hooks;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import io.cucumber.java.es.Y;
 import opencart.pages.HomePage;
 import org.testng.Assert;
 
@@ -26,6 +27,11 @@ public class HomeDefinitions {
         Assert.assertEquals(homePage.getTitulo(), "Your Store");
         Assert.assertTrue(homePage.buscadorEsVisible());
         Assert.assertTrue(homePage.carrouselEsVisible());
+    }
+
+    @Y("el usuario ingresa al login")
+    public void elUsuarioIngresaAlLogin() {
+        homePage.ingresarAlLogin();
     }
 
 //    HomePage homePage = new HomePage(getDriver());
