@@ -24,11 +24,11 @@ public class RegisterTest  extends BaseTest{
         homePage.ingresarAlRegistro();
 
         registerPage.completarFormulario(
-                "Julian",
-                "Aguilar",
+                faker.name().firstName(),
+                faker.name().lastName(),
                 faker.internet().emailAddress(),
-                "1122334455",
-                "12345678");
+                faker.phoneNumber().phoneNumber(),
+                faker.internet().password());
 
         Assert.assertEquals(accountPage.getTitulo(), "Account");
         Assert.assertTrue(accountPage.descriptionIsDisplayed());
