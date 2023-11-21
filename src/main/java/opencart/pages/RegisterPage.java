@@ -39,7 +39,7 @@ public class RegisterPage {
         lastNameElem.sendKeys(lastname);
 
         WebElement emailElem = wait.until(ExpectedConditions.visibilityOfElementLocated(emailInput));
-        emailElem.sendKeys(lastname);
+        emailElem.sendKeys(email);
 
         WebElement telElem = wait.until(ExpectedConditions.visibilityOfElementLocated(telephoneInput));
         telElem.sendKeys(telephone);
