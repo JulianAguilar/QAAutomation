@@ -27,24 +27,28 @@ public class RegisterPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void completarFormulario() {
+    public void completarFormulario(String firstname,
+                                    String lastname,
+                                    String email,
+                                    String telephone,
+                                    String password) {
         WebElement firstNameElem = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameInput));
-        firstNameElem.sendKeys("Julian");
+        firstNameElem.sendKeys(firstname);
 
         WebElement lastNameElem = wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameInput));
-        lastNameElem.sendKeys("Aguilar");
+        lastNameElem.sendKeys(lastname);
 
         WebElement emailElem = wait.until(ExpectedConditions.visibilityOfElementLocated(emailInput));
-        emailElem.sendKeys("julian@2.com.mx");
+        emailElem.sendKeys(lastname);
 
         WebElement telElem = wait.until(ExpectedConditions.visibilityOfElementLocated(telephoneInput));
-        telElem.sendKeys("1122334455");
+        telElem.sendKeys(telephone);
 
         WebElement passElem = wait.until(ExpectedConditions.visibilityOfElementLocated(passwordInput));
-        passElem.sendKeys("12345678");
+        passElem.sendKeys(password);
 
         WebElement confirmPassElem = wait.until(ExpectedConditions.visibilityOfElementLocated(passwordConfirmInput));
-        confirmPassElem.sendKeys("12345678");
+        confirmPassElem.sendKeys(password);
 
         WebElement checkElem = wait.until(ExpectedConditions.elementToBeClickable(termsAndConditionsCheckbox));
         checkElem.click();
