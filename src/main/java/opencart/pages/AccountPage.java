@@ -13,6 +13,8 @@ public class AccountPage {
     By title = By.xpath("//div[@id='content']/h1");
     By description = By.xpath("//*[text()='Congratulations! Your new account has been successfully created!']");
 
+   // By categoriaBtn = By.xpath("//*[text()='Cameras]");
+
     WebDriver driver;
     WebDriverWait wait;
 
@@ -30,5 +32,14 @@ public class AccountPage {
         WebElement descriptionElem = wait.until(ExpectedConditions.visibilityOfElementLocated(description));
         return descriptionElem.isDisplayed();
     }
+
+   // public void ingresarCamara(){
+    //    WebElement categoriaBtnElem = wait.until(ExpectedConditions.elementToBeClickable(categoriaBtn));
+     //   categoriaBtnElem.click();
+    //}
+
+
+
+
 
 }
