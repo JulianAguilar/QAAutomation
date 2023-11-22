@@ -34,6 +34,11 @@ public class HomeDefinitions {
         homePage.ingresarAlLogin();
     }
 
+    @Y("el usuario ingresa a crear cuenta")
+    public void elUsuarioIngresaACrearCuenta() {
+        homePage.ingresarAlRegistro();
+    }
+
 //    HomePage homePage = new HomePage(getDriver());
 
 //    getDriver().get("https://opencart.abstracta.us/");
