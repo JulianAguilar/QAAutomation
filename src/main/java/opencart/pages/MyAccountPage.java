@@ -15,7 +15,7 @@ public class MyAccountPage {
 
     By categoriaBtn = By.xpath("//*[text()='Cameras']");
 
-    //By tabletsBtn = By.xpath("//*[text()='Tablets']");
+    By tabletsBtn = By.xpath("//*[text()='Tablets']");
 
 
     WebDriver driver;
@@ -36,10 +36,10 @@ public class MyAccountPage {
         categoriaBtnElem.click();
     }
 
-    //public void ingresarTablets(){
-    //    WebElement tabletsBtnElem = wait.until(ExpectedConditions.elementToBeClickable(tabletsBtn));
-    //    tabletsBtnElem.click();
-   // }
+    public void ingresarTablets(){
+        WebElement tabletsBtnElem = wait.until(ExpectedConditions.elementToBeClickable(tabletsBtn));
+        tabletsBtnElem.click();
+    }
 
 
 }

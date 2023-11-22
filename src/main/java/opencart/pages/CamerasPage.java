@@ -23,9 +23,7 @@ public class CamerasPage {
     public CamerasPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
     }
-
 
     public void favoriteCamara(){
         WebElement favoriteBtnElem = wait.until(ExpectedConditions.elementToBeClickable(favoriteBtn));
