@@ -1,9 +1,8 @@
 package com.icaro.opencart;
 
-import opencart.pages.HomePage;
-import opencart.pages.LoginPage;
-import opencart.pages.MyAccountPage;
-import opencart.pages.TabletsPage;
+import opencart.pages.*;
+import org.checkerframework.checker.units.qual.C;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CarritoTest extends BaseTest{
@@ -15,6 +14,7 @@ public class CarritoTest extends BaseTest{
         LoginPage loginPage = new LoginPage(getDriver());
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
         TabletsPage tabletsPage = new TabletsPage(getDriver());
+        CarritoPage carritoPage = new CarritoPage(getDriver());
 
 
         //1
@@ -35,6 +35,12 @@ public class CarritoTest extends BaseTest{
         //7 ver carrito
         tabletsPage.vercarrito();
 
+        //7 Mensaje de agregado al carrito exitosamente
+        //Assert.assertEquals(tabletsPage.compraCorrecta(), " Success: You have added ");
+
+        //Assert.assertEquals(tabletsPage.compraCorrecta()," Success: You have added ");
+        //Assert.assertEquals(homePage.getTitulo(), "Your Store");
+        Assert.assertEquals(carritoPage.confirmaCompra(),"SAM1");
 
 
     }

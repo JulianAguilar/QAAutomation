@@ -13,7 +13,9 @@ public class TabletsPage {
 
     By carritoTabletBtn = By.xpath("//*[@id='content']/div[2]/div/div/div[2]/div[2]/button[1]  ");
 
-    By carritoBoton = By.id("cart-total");
+    By carritoBoton = By.xpath("//a[@title='Shopping Cart']");
+
+    By confirmacionTabletCarrito = By.xpath("//div[text()=' Success: You have added ']");
 
     WebDriver driver;
     WebDriverWait wait;
@@ -28,6 +30,11 @@ public class TabletsPage {
         agregarAlCarritoElem.click();
     }
 
+
+    public String compraCorrecta(){
+        WebElement confirmacionTabletCarritoElem = wait.until(ExpectedConditions.visibilityOfElementLocated(confirmacionTabletCarrito));
+        return confirmacionTabletCarritoElem.getText();
+    }
 
     public void vercarrito(){
         WebElement verCarritoElem = wait.until(ExpectedConditions.elementToBeClickable(carritoBoton));

@@ -15,7 +15,7 @@ public class HomePage {
     By carrousel = By.id("slideshow0");
 
     By myAccountBtn = By.xpath("//a[@title='My Account']");
-    By loginBtn = By.xpath("//a[text()='Login']"); //a[contains(@ref, 'account/login')]
+    By loginBtn = By.xpath("//a[text()='Login']"); //a[contains(@ref, 'account/login')]  Shopping Cart //a[@title='Shopping Cart']
 
     By registerBtn = By.xpath("//a[text()='Register']");
 
