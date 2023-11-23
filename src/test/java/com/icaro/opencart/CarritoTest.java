@@ -40,6 +40,8 @@ public class CarritoTest extends BaseTest{
 
         //Assert.assertEquals(tabletsPage.compraCorrecta()," Success: You have added ");
         //Assert.assertEquals(homePage.getTitulo(), "Your Store");
+
+        //Comprobacion de articulo agregado al carrito
         Assert.assertEquals(carritoPage.confirmaCompra(),"SAM1");
 
 
